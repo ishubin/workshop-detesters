@@ -1,0 +1,43 @@
+
+@import common.gspec
+@script rules.js
+
+
+@set language  dutch
+
+
+= Skeleton =
+
+    @on *
+        header:
+            height ~ 70px
+
+        header.icon:
+            | squared
+
+
+    @on desktop
+        header:
+            width 900px
+            centered horizontally inside screen
+        
+        header.caption:
+            text is "${getExpectedDesktopCaption(language)}"
+
+        @forEach [*] as item
+            ${item}:
+                image file dump/objects/${item}.png
+
+
+        | menu.item-* are aligned horizontally next to each other by 0 to 5 px margin 
+
+    @on mobile
+        header:
+            inside screen 0px top left right
+
+        header.caption:
+            near header.icon 15 to 30px right 
+            text is "Sample Websites"
+
+        | menu.item-* should be rendered in 2 column table layout
+

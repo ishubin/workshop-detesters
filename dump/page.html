@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Galen Page Dump</title>
+        <link rel="stylesheet" type="text/css" href="galen-pagedump.css"></link>
+        <script src="jquery-1.11.2.min.js"></script>
+        <script src="galen-pagedump.js"></script>
+        <script>
+var pageData = {"title":"Sample Website for Galen Framework","items":{"menu.item-3":{"area":[282,70,100,64],"text":"About","hasImage":true},"menu.item-4":{"area":[386,70,100,64],"text":"Contact","hasImage":true},"menu":{"area":[62,70,900,64],"text":"Home My Notes About Contact","hasImage":true},"header.caption":{"area":[132,20,629,40],"text":"Sample Website for Galen Framework","hasImage":true},"menu.item-1":{"area":[62,70,100,64],"text":"Home","hasImage":true},"menu.item-2":{"area":[166,70,112,64],"text":"My Notes","hasImage":true},"header.icon":{"area":[62,13,48,48],"text":"","hasImage":true},"header":{"area":[62,0,900,70],"text":"Sample Website for Galen Framework","hasImage":true}},"pageName":"http://testapp.galenframework.com"};
+        </script>
+    </head>
+
+    <body>
+        <script>
+            $(function () {
+                initGalenPageDump(pageData);
+            });
+        </script>
+        <h1>http://testapp.galenframework.com - Galen page dump</h1>
+        <div class="image">
+            <div class="canvas">
+            </div>
+            <img src="page.png">
+            <div class="bottombarstub"></div>
+        </div>
+        <div id="sidebar">
+            <div class="wrapper">
+                <div id="object-list">
+                    <h2>All objects:</h2>
+                    <ul>
+                    </ul>
+                </div>
+                <div id="object-details" style="display: none;">
+                    <h2>Details</h2>
+                    <span class="field-name">Name:</span>
+                    <span class="field-value xf-object-name"></span>
+
+                    <span class="field-name">Area:</span>
+                    <span class="field-value xf-object-area"></span>
+
+                    <span class="field-name">Text:</span>
+                    <span class="field-value xf-object-text"></span>
+                    
+                    <span class="field-name">Image:</span>
+                    <div class="image"></div>
+
+                </div>
+                <div class="bottombarstub"></div>
+            </div>
+        </div>
+        <div id="bottombar">
+            <div class="wrapper">
+                <div id="object-suggestions" style="display: none;">
+                    <h2>Spec Suggestions</h2>
+                    <div class="spec-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

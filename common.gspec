@@ -1,0 +1,15 @@
+
+@objects
+    header      #header .middle-wrapper
+        icon        img
+        caption     h1
+
+    menu        #menu .middle-wrapper
+        item-*      ul li
+
+
+@rule %{itemPattern} are aligned %{direction} next to each other by %{margin} margin  
+    @forEach [${itemPattern}] as menuItem, prev as previousItem
+        ${menuItem}:
+            aligned ${direction} all ${previousItem}
+            right-of ${previousItem} ${margin}
